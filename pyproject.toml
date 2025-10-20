@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "sc_linac_physics"
-version = "1.1.0"
+version = "1.4.0"
 description = "Controls, analysis, and displays for SC Linac operations"
 readme = "README.md"
 requires-python = ">=3.12"
@@ -48,7 +48,7 @@ dev = [
 ]
 
 [tool.black]
-line-length = 120
+line-length = 80
 target-version = ['py312']
 include = '\.pyi?$'
 extend-exclude = '''
@@ -87,6 +87,9 @@ testpaths = ["tests"]
 python_files = ["test_*.py"]
 python_classes = ["Test*"]
 python_functions = ["test_*"]
+filterwarnings = [
+    "ignore:.*autoRangeEnabled.*:DeprecationWarning"
+]
 
 [tool.coverage.run]
 source = ["src"]

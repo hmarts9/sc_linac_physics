@@ -2,6 +2,96 @@
 
 <!-- version list -->
 
+## v1.4.0 (2025-10-20)
+
+### Bug Fixes
+
+- Use property setter for chirp frequency assignment
+  ([#129](https://github.com/slaclab/sc_linac_physics/pull/129),
+  [`1bc129f`](https://github.com/slaclab/sc_linac_physics/commit/1bc129fa2513cb1144973e39b463dacc592c9ce4))
+
+### Chores
+
+- Resolved linting errors from last push
+  ([#129](https://github.com/slaclab/sc_linac_physics/pull/129),
+  [`1bc129f`](https://github.com/slaclab/sc_linac_physics/commit/1bc129fa2513cb1144973e39b463dacc592c9ce4))
+
+### Features
+
+- Simplify cavity tuning with chirp preset button
+  ([#129](https://github.com/slaclab/sc_linac_physics/pull/129),
+  [`1bc129f`](https://github.com/slaclab/sc_linac_physics/commit/1bc129fa2513cb1144973e39b463dacc592c9ce4))
+
+
+## v1.3.0 (2025-10-17)
+
+### Code Style
+
+- Apply black formatting ([#128](https://github.com/slaclab/sc_linac_physics/pull/128),
+  [`2335d55`](https://github.com/slaclab/sc_linac_physics/commit/2335d555b76e02d4c753af65baf661eaab050615))
+
+- Reformat with black line-length=80 ([#128](https://github.com/slaclab/sc_linac_physics/pull/128),
+  [`2335d55`](https://github.com/slaclab/sc_linac_physics/commit/2335d555b76e02d4c753af65baf661eaab050615))
+
+### Features
+
+- **cli**: Add microphonics application launcher
+  ([#127](https://github.com/slaclab/sc_linac_physics/pull/127),
+  [`9da8e8e`](https://github.com/slaclab/sc_linac_physics/commit/9da8e8e2604b0fe6a9673eb79594b9568e5995b1))
+
+
+## v1.2.0 (2025-10-16)
+
+### Bug Fixes
+
+- **microphonics**: Correct variable shadowing in config panel
+  ([#126](https://github.com/slaclab/sc_linac_physics/pull/126),
+  [`de18c2f`](https://github.com/slaclab/sc_linac_physics/commit/de18c2f4e11d4e9d90bb2583404255a4543e2316))
+
+### Documentation
+
+- **readme**: Add CLI usage documentation and examples
+  ([`027946f`](https://github.com/slaclab/sc_linac_physics/commit/027946f9ff80f21c73c885a0c957252664cd0467))
+
+### Features
+
+- **tests**: Add TimeSeriesPlot test suite with Python 3.13 compatibility
+  ([#126](https://github.com/slaclab/sc_linac_physics/pull/126),
+  [`de18c2f`](https://github.com/slaclab/sc_linac_physics/commit/de18c2f4e11d4e9d90bb2583404255a4543e2316))
+
+### Refactoring
+
+- **microphonics**: Move application to src layout
+  ([#126](https://github.com/slaclab/sc_linac_physics/pull/126),
+  [`de18c2f`](https://github.com/slaclab/sc_linac_physics/commit/de18c2f4e11d4e9d90bb2583404255a4543e2316))
+
+### Testing
+
+- **async**: Add AsyncDataManager test suite (49/49 passing)
+  ([#126](https://github.com/slaclab/sc_linac_physics/pull/126),
+  [`de18c2f`](https://github.com/slaclab/sc_linac_physics/commit/de18c2f4e11d4e9d90bb2583404255a4543e2316))
+
+- **microphonics**: Add DataAcquisitionManager test suite
+  ([#126](https://github.com/slaclab/sc_linac_physics/pull/126),
+  [`de18c2f`](https://github.com/slaclab/sc_linac_physics/commit/de18c2f4e11d4e9d90bb2583404255a4543e2316))
+
+- **microphonics**: Add file_parser unit tests
+  ([#126](https://github.com/slaclab/sc_linac_physics/pull/126),
+  [`de18c2f`](https://github.com/slaclab/sc_linac_physics/commit/de18c2f4e11d4e9d90bb2583404255a4543e2316))
+
+- **microphonics**: Add main window test coverage
+  ([#126](https://github.com/slaclab/sc_linac_physics/pull/126),
+  [`de18c2f`](https://github.com/slaclab/sc_linac_physics/commit/de18c2f4e11d4e9d90bb2583404255a4543e2316))
+
+- **plots**: Add comprehensive PlotPanel test suite (45/45 passing)
+  ([#126](https://github.com/slaclab/sc_linac_physics/pull/126),
+  [`de18c2f`](https://github.com/slaclab/sc_linac_physics/commit/de18c2f4e11d4e9d90bb2583404255a4543e2316))
+
+- **plots**: Add comprehensive SpectrogramPlot test suite
+  ([#126](https://github.com/slaclab/sc_linac_physics/pull/126),
+  [`de18c2f`](https://github.com/slaclab/sc_linac_physics/commit/de18c2f4e11d4e9d90bb2583404255a4543e2316))
+
+
 ## v1.1.0 (2025-10-14)
 
 ### Features

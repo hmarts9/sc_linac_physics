@@ -1,8 +1,9 @@
-# VS Code
+# IDEs
 .vscode/*
-
-# PyCharm
 .idea/*
+
+# System Files
+*.DS_Store
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
