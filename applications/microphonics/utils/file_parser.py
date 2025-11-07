@@ -8,6 +8,7 @@ import numpy as np
 
 from applications.microphonics.utils.pv_utils import (
     extract_cavity_channel_from_pv,
+    extract_cryomodule_from_pv,
 )
 
 HEADER_MARKER = "# ACCL:"
@@ -157,9 +158,11 @@ def _structure_parsed_data(
         "decimation": decimation,  # Sampling decimation factor
         "filepath": str(file_path),  # Path to source file
         "source": "file",  # Data source identifier
+        "cryomodule": None,
     }
     # Track which cavity numbers found for cavity_list
     cavity_numbers_found = set()
+    cryomodule_id = None
     expected_cols = len(channel_pvs)
     actual_cols = data_array.shape[1] if data_array.ndim == 2 else 0
     if data_array.size > 0 and actual_cols != expected_cols:
@@ -171,6 +174,8 @@ def _structure_parsed_data(
         actual_cols = expected_cols
     for idx, pv_name in enumerate(channel_pvs):
         logging.debug(f"Structuring data for index {idx}, pv_name: '{pv_name}'")
+        if cryomodule_id is None:
+            cryomodule_id = extract_cryomodule_from_pv(pv_name)
         parsed_info = extract_cavity_channel_from_pv(pv_name)
         if parsed_info:
             cav_num, channel_type = parsed_info
@@ -193,6 +198,7 @@ def _structure_parsed_data(
                 f"Warning (FileParser): Skipping data column {idx} due to PV parsing failure: {pv_name}"
             )
     output_data["cavity_list"] = sorted(list(cavity_numbers_found))
+    output_data["cryomodule"] = cryomodule_id
     return output_data
 
 
